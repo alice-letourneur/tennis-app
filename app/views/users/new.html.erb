@@ -1,12 +1,23 @@
-<h1>Up your game of tennis!</h1>
-<p>We match tennis players of similar level and help them to find the perfect court in their area.</p>
-<h3>Sign up now and we'll let you know as soon as we launch in your area</h3>
-
-<%= form_for :user, url: '/users' do |f| %>
-  <p>Name: <%= f.text_field :name %></p>
-  <p>Email: <%= f.text_field :email %></p>
-  <p>Password: <%= f.password_field :password %></p>
-  <p>Password Confirmation: <%= f.password_field :password_confirmation %></p>
-  <p><%= f.submit "Submit" %></p>
-  <%= flash[:notice] %>
-<% end %>
+<header class="row">
+  <div class="small-12 large-12 columns">
+    <h1>Up your game of tennis!</h1>
+    <p>We match tennis players of similar level and help them to find the perfect court in their area.</p>
+  </div>
+</header>
+<div class="row">
+  <div class="small-12 large-12 columns">
+    <p>Sign up now and we'll let you know as soon as we launch in your area</p>
+  </div>
+</div>
+<div class="row">
+  <div class="small-12 large-12 columns">
+    <%= form_for :user, url: '/users' do |f| %>
+      <p>Name: <%= f.text_field :name %></p>
+      <p>Email: <%= f.text_field :email %></p>
+      <p>Password: <%= f.password_field :password %></p>
+      <p>Password Confirmation: <%= f.password_field :password_confirmation %></p>
+      <p><%= f.submit "Submit", class: "button radius bordered shadow primary"  %></p>
+      <%= flash[:notice] %>
+    <% end %>
+  </div>
+</div>
