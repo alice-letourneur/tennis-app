@@ -1,0 +1,17 @@
+<header class="row">
+  <div class="small-12 large-12 columns">
+    <h1>Login</h1>
+  </div>
+</header>
+<div class="row">
+  <div class="small-12 large-12 columns">
+    <%= form_tag "/login" do %>
+    <%= label_tag "Email" %>
+    <%= text_field_tag :email %>
+    <%= label_tag "Password" %>
+    <%= password_field_tag :password %>
+    <%= submit_tag "Login" %>
+    <%= flash[:notice] %>
+    <% end %>
+  </div>
+</div>
